@@ -3,13 +3,17 @@ CREATE TABLE employees (
     name VARCHAR2(100),
     salary NUMBER(10, 2)
 );
-BEGIN
+
   INSERT INTO employees (emp_id, name, salary) VALUES (101, 'Rahul Mehta', 55000);
   INSERT INTO employees (emp_id, name, salary) VALUES (102, 'Priya Sharma', 62000);
   INSERT INTO employees (emp_id, name, salary) VALUES (103, 'Amit Patel', 48000);
   INSERT INTO employees (emp_id, name, salary) VALUES (104, 'Sneha Rao', 75000);
   INSERT INTO employees (emp_id, name, salary) VALUES (105, 'Vikram Singh', 51000);
-  
-  COMMIT;
-END;
-/
+
+
+alter table employees
+ADD Bonus number(10,2);
+
+update employees set Bonus = salary*0.10;
+
+select * from employees;

@@ -17,3 +17,11 @@ ADD Bonus number(10,2);
 update employees set Bonus = salary*0.10;
 
 select * from employees;
+
+//5 more employee details added
+ INSERT INTO employees (emp_id, name, salary) VALUES (106, 'Zishan  Mehta', 55000);
+  INSERT INTO employees (emp_id, name, salary) VALUES (107, 'Zishan Sharma', 62000);
+  INSERT INTO employees (emp_id, name, salary) VALUES (108, 'Amit Patel', 48000);
+  INSERT INTO employees (emp_id, name, salary) VALUES (109, 'Fahim Rao', 75000);
+  INSERT INTO employees (emp_id, name, salary) VALUES (110, 'Vikram Singh', 51000);
+UPDATE employees SET Bonus = salary * 0.10 WHERE Bonus IS NULL;

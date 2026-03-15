@@ -16,15 +16,15 @@ ADD Bonus number(10,2);
 
 update employees set Bonus = salary*0.10;
 
-select * from employees;*/
+select * from employees;
 
 --5 more employee details added
- /*INSERT INTO employees (emp_id, name, salary) VALUES (106, 'Zishan  Mehta', 55000);
+ INSERT INTO employees (emp_id, name, salary) VALUES (106, 'Zishan  Mehta', 55000);
   INSERT INTO employees (emp_id, name, salary) VALUES (107, 'Zishan Sharma', 62000);
   INSERT INTO employees (emp_id, name, salary) VALUES (108, 'Amit Patel', 48000);
   INSERT INTO employees (emp_id, name, salary) VALUES (109, 'Fahim Rao', 75000);
-  INSERT INTO employees (emp_id, name, salary) VALUES (110, 'Vikram Singh', 51000);*/
-  --UPDATE employees SET Bonus = salary * 0.10 WHERE Bonus IS NULL;
+  INSERT INTO employees (emp_id, name, salary) VALUES (110, 'Vikram Singh', 51000);
+ -- UPDATE employees SET Bonus = salary * 0.10 WHERE Bonus IS NULL;
   
 
   -- delete duplicate valuese from the employees table using ROWID 
@@ -35,4 +35,15 @@ WHERE ROWID NOT IN (
     SELECT MIN(ROWID)
     FROM employees
     GROUP BY name, salary
-);
+    );
+INSERT INTO employees (emp_id, name, salary) VALUES (111, 'Arjun Kumar', 60000);
+INSERT INTO employees (emp_id, name, salary) VALUES (112, 'Neha Verma', 54000);
+INSERT INTO employees (emp_id, name, salary) VALUES (113, 'Rohit Sharma', 72000);
+INSERT INTO employees (emp_id, name, salary) VALUES (114, 'Sara Khan', 50000);
+INSERT INTO employees (emp_id, name, salary) VALUES (115, 'Imran Ali', 65000);
+UPDATE employees 
+SET Bonus = salary * 0.10 
+WHERE Bonus IS NULL;*/
+SELECT name, salary
+FROM employees
+WHERE salary = (SELECT MAX(salary) FROM employees);

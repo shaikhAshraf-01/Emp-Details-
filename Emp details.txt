@@ -43,7 +43,11 @@ INSERT INTO employees (emp_id, name, salary) VALUES (114, 'Sara Khan', 50000);
 INSERT INTO employees (emp_id, name, salary) VALUES (115, 'Imran Ali', 65000);
 UPDATE employees 
 SET Bonus = salary * 0.10 
-WHERE Bonus IS NULL;*/
+WHERE Bonus IS NULL;
 SELECT name, salary
 FROM employees
-WHERE salary = (SELECT MAX(salary) FROM employees);
+WHERE salary = (SELECT MAX(salary) FROM employees);*/
+
+select name, salary
+from employees
+where salary = (select min(salary) from employees);
